@@ -1,5 +1,20 @@
 {
-  "dependencies": {
+  "name": "the-edge",
+  "version": "1.0.0",
+  "description": "A webtorrent-integrated streaming application",
+  "main": "./JS/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ethan Woods",
+  "license": "MIT",
+  "devDependencies": {
     "electron": "^22.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.2.1",
+    "electron-json-storage": "^4.6.0",
+    "fs": "^0.0.1-security",
+    "rarbg-api": "^1.1.4"
   }
 }

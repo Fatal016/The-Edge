@@ -1,0 +1,98 @@
+:root {
+    --primary: #000000;
+    --accent: #ffffff;
+    --font: Verdana;
+}
+
+.dark-mode {
+    --primary: #000000;
+    --accent: #ffffff;
+}
+
+.light-mode {
+    --primary: #ffffff;
+    --accent: #000000;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+h1 {
+    font-size: 50px;
+    color: var(--accent);
+    margin: 25px;
+}
+
+h2 {
+    font-size: 60px;
+    color: var(--accent);
+    margin: 25px;
+    
+    user-select: none;
+}
+
+body {
+    background-color: var(--primary);
+    font: normal 10px var(--font);
+    font-weight: bold;
+}
+
+input[type=text] { 
+    margin: 0 25% 0 25%;
+    width: 50%;
+    display: inline-block;
+    
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid var(--accent);
+    
+    font: var(--font);
+    font-size: 50pt;
+    color: var(--accent);
+    text-align: center;
+    background-color: var(--primary);
+}
+
+.gallery__item {
+    overflow:scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    left: 0;
+}
+
+.gallery__row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.gallery__image {
+    position: relative;
+    width: 300px;
+    object-fit: cover;
+    padding: 10px;
+    border: 3px solid transparent;
+}
+
+.gallery__image:hover {
+    border: 3px solid white
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2e2e2e;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 30px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B6B6B6;
+  }

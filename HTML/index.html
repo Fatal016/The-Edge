@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="../CSS/styles.css" rel="stylesheet">
+    <title>The Edge</title>
+  </head>
+  <body>
+    <header>
+      <h1>The Edge</h1>
+    </header>
+    <main>
+      <img src="../ICONS/SettingsIcon.png" class="SettingsIcon" alt="Settings">
+      <input type="text" name="PrimarySearch" id="PrimarySearch" value="" placeholder="Find the best" spellcheck="false">
+        <script>
+          document.getElementById("PrimarySearch").addEventListener("keypress", function(inputVal) {
+            if (inputVal.key === "Enter") {
+              window.api.invoke("search", document.getElementById("PrimarySearch").value)
+              .then(function(response) {
+                console.log(response.d[0].q);
+              })
+              .catch(function(error) {
+                console.error(error);
+              })
+            }
+          });
+        </script>
+        <h2>Popular Movies</h2>
+        <div class="gallery__row">
+          <figure class="gallery__item">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+        </div>
+        <h2>Popular TV Series</h2>
+        <div class="gallery">
+          <figure class="gallery__item">
+            <img src="./IMG-1249.jpg" class="gallery__image" alt="./IMG-1249.jpg">
+            <div class="imageOverlay">Game of Thrones</div>
+          </figure>
+        </div>
+      </main>
+  </body>
+</html>
